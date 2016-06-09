@@ -22,6 +22,13 @@ button {
   min-height: 400px;
 }
 
+.error {
+  background: red;
+  color: white;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
 form {
   margin-bottom: 10px;
 }

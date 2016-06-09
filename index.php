@@ -2,7 +2,7 @@
 
   include 'database.php';
 
-  $query = "SELECT * FROM shouts";
+  $query = "SELECT * FROM shouts ORDER BY id DESC";
   $shouts = mysqli_query($conn, $query);
 
 ?>
@@ -32,7 +32,10 @@
       </ul>
     </div>
     <div id="input">
-      <form method="POST" action="process.php">
+      <?php if (isset($_GET['error'])) { ?>
+        <p class="error"><?php echo $_GET['error']; ?></p>
+      <?php } ?>
+      <form method="post" action="process.php">
         <div class="row">
           <div class="col-sm-3">
             <div class="form-group">
@@ -48,7 +51,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-success btn-block">SEND YO' SHOUT!</button>
+        <button type="submit" name="submit" class="btn btn-success btn-block">SEND YO' SHOUT!</button>
       </form>
     </div>
   </div>
