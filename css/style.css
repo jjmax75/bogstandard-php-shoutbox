@@ -10,11 +10,20 @@ body {
   background: #eee;
 }
 
-#container {
+button {
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+.container {
   background: #333;
   margin: 50px auto;
   width: 60%;
   min-height: 400px;
+}
+
+form {
+  margin-bottom: 10px;
 }
 
 h1 {
@@ -22,6 +31,10 @@ h1 {
   font-size: 24px;
   padding: 15px 0 10px 10px;
   border-bottom: 1px solid #fff;
+}
+
+input {
+  width: 90%;
 }
 
 #shouts {
@@ -40,12 +53,4 @@ h1 {
 
 .shout span {
   color: #aaa;
-}
-
-input {
-  width: 48%;
-  height: 25px;
-  margin-bottom: 20px;
-  padding: 3px;
-  border: 1px solid #333;
 }
